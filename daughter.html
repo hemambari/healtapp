@@ -1,0 +1,652 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="Health Plus">
+    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+    <title>Health Plus</title>
+
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/calendar.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/fontawesome.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="sidebar js-sidebar">
+            <div class="sidebar-content js-simplebar">
+                <a class="sidebar-brand" href="admin.html">
+                    <span class="align-middle">Health plus</span>
+                </a>
+
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Admin
+                    </li>
+
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="admin.html">
+                            <i class="fa  fa-user"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="documents.html">
+                            <i class="fas fa-file-alt"></i> <span class="align-middle">Documents</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="sidebar-header">
+                        Others
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="members.html">
+                            <i class="fas fa-users"></i> <span class="align-middle">Members View</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="profile.html">
+                            <i class="fas fa-users-cog"></i> <span class="align-middle">Profile</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+        </nav>
+
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg">
+                <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                </a>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align">
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                                <div class="position-relative">
+                                    <i class="align-middle" data-feather="bell"></i>
+                                    <span class="indicator">2</span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+                                <div class="dropdown-menu-header">
+                                    2 New Notifications
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-danger" data-feather="alert-circle"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Update Events</div>
+                                                <div class="text-muted small mt-1">Father Checkup.</div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="list-group-item">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-2">
+                                                <i class="text-primary" data-feather="home"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="text-dark">Last login</div>
+                                                <div class="text-muted small mt-1">5h ago</div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <i class="align-middle" data-feather="settings"></i>
+                            </a>
+
+                            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <img src="img/mem2.jpg" class="avatar img-fluid rounded me-1" alt="Daughter" /> <span class="text-dark">Daughter</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings</a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="container-fluid p-0">
+
+                    <h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard <a href="#addrec" class="btn btn-primary">Add Record</a></h1>
+                    <!--- popup -->
+                    <div id="addrec" class="overlay">
+                        <div class="popup">
+                            <h2>Add Health Record</h2>
+                            <a class="close" href="#">&times;</a>
+                            <div class="">
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" style="padding:5px !important;">
+                                        <h5 class="card-title mb-0">Date</h5>
+                                    </div>
+                                    <div class="card-body" style="padding:5px 0px !important;">
+                                        <input type="text" class="form-control" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" style="padding:5px !important;">
+                                        <h5 class="card-title mb-0">Sugar</h5>
+                                    </div>
+                                    <div class="card-body" style="padding:5px 0px !important;">
+                                        <input type="text" class="form-control" placeholder="Sugar">
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" style="padding:5px !important;">
+                                        <h5 class="card-title mb-0">SPO2</h5>
+                                    </div>
+                                    <div class="card-body" style="padding:5px 0px !important;">
+                                        <input type="text" class="form-control" placeholder="SPO2">
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" style="padding:5px !important;">
+                                        <h5 class="card-title mb-0">Walking</h5>
+                                    </div>
+                                    <div class="card-body" style="padding:5px 0px !important;">
+                                        <input type="text" class="form-control" placeholder="Walking">
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" style="padding:5px !important;">
+                                        <h5 class="card-title mb-0">Heart Rate</h5>
+                                    </div>
+                                    <div class="card-body" style="padding:5px 0px !important;">
+                                        <input type="text" class="form-control" placeholder="Heart Rate">
+                                    </div>
+                                </div>
+                                <div class="card" style="margin-bottom:0px !important;">
+                                    <div class="card-header" style="padding:5px !important;">
+                                        <h5 class="card-title mb-0">Upload Document</h5>
+                                    </div>
+                                    <div class="card-body" style="padding:5px 0px !important;">
+                                        <input type="file" class="form-control" placeholder="Heart Rate">
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-success">Add</a>
+                                <a href="#" class="btn btn-primary">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--- popup -->
+                    <div class="row">
+                        <div class="col-xl-6 col-xxl-5 d-flex">
+                            <div class="w-100">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col mt-0">
+                                                        <h5 class="card-title">SPO2</h5>
+                                                    </div>
+
+                                                    <div class="col-auto">
+                                                        <div class="stat text-primary blue">
+                                                            <i class="fas fa-tint"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-wrap">
+                                                    <div class="circle">
+                                                        <div class="mask half">
+                                                            <div class="fill blue"></div>
+                                                        </div>
+                                                        <div class="mask full">
+                                                            <div class="fill blue"></div>
+                                                        </div>
+                                                        <div class="inside-circle"> <span id="value">75</span>% </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col mt-0">
+                                                        <h5 class="card-title">Step Count</h5>
+                                                    </div>
+
+                                                    <div class="col-auto">
+                                                        <div class="stat text-primary orange">
+                                                            <i class="fas fa-shoe-prints"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-wrap">
+                                                    <div class="circle">
+                                                        <div class="mask half">
+                                                            <div class="fill orange"></div>
+                                                        </div>
+                                                        <div class="mask full">
+                                                            <div class="fill orange"></div>
+                                                        </div>
+                                                        <div class="inside-circle"> <span id="count">5890</span></div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col mt-0">
+                                                        <h5 class="card-title">Running</h5>
+                                                    </div>
+
+                                                    <div class="col-auto">
+                                                        <div class="stat text-primary purple">
+                                                            <i class="fas fa-running"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-wrap">
+                                                    <div class="circle">
+                                                        <div class="mask half">
+                                                            <div class="fill purple"></div>
+                                                        </div>
+                                                        <div class="mask full">
+                                                            <div class="fill purple"></div>
+                                                        </div>
+                                                        <div class="inside-circle"> <span id="count1">5890</span></div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col mt-0">
+                                                        <h5 class="card-title">Heart Rate</h5>
+                                                    </div>
+
+                                                    <div class="col-auto">
+                                                        <div class="stat text-primary pink">
+                                                            <i class="fas fa-heartbeat"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-rt-12">
+                                                    <div class="Scriptcontent">
+
+                                                        <!-- partial:index.partial.html -->
+                                                        <div class="heart-rate">
+                                                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
+                                                            <polyline fill="none" stroke="#f37070" stroke-width="3" stroke-miterlimit="10" points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486" />
+  </svg>
+                                                            <div class="fade-in"></div>
+                                                            <div class="fade-out"></div>
+                                                        </div>
+                                                        <!-- partial -->
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-xxl-7">
+                            <div class="card flex-fill w-100">
+                                <div class="card-header">
+
+                                    <h5 class="card-title mb-0">Calendar</h5>
+                                </div>
+                                <div class="card-body d-flex">
+                                    <div class="align-self-center w-100">
+                                        <div id="cal-wrap">
+                                            <!-- (A) PERIOD SELECTOR -->
+                                            <div id="cal-date">
+                                                <select id="cal-mth"></select>
+                                                <select id="cal-yr"></select>
+                                            </div>
+
+                                            <!-- (B) CALENDAR -->
+                                            <div id="cal-container"></div>
+
+                                            <!-- (C) EVENT FORM -->
+                                            <form id="cal-event">
+                                                <h1 id="evt-head"></h1>
+                                                <div id="evt-date"></div>
+                                                <textarea id="evt-details" required></textarea>
+                                                <input id="evt-close" type="button" value="Close" />
+                                                <input id="evt-del" type="button" value="Delete" />
+                                                <input id="evt-save" type="submit" value="Save" />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        
+                        <div class="col-xl-12 col-xxl-12 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-header">
+
+                                    <h5 class="card-title mb-0">Latest Events</h5>
+                                </div>
+                                <table class="table table-hover my-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th class="d-none d-xl-table-cell">Upcoming Date</th>
+                                            <th class="d-none d-xl-table-cell">Completed Date</th>
+                                            <th>Status</th>
+                                            <th class="d-none d-md-table-cell">Assignee</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Apollo Hospital</td>
+                                            <td class="d-none d-xl-table-cell">-</td>
+                                            <td class="d-none d-xl-table-cell">03/06/2022</td>
+                                            <td><span class="badge bg-success">Done</span></td>
+                                            <td class="d-none d-md-table-cell">Father</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apollo Hospital</td>
+                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
+                                            <td class="d-none d-xl-table-cell">-</td>
+                                            <td><span class="badge bg-danger">Cancelled</span></td>
+                                            <td class="d-none d-md-table-cell">Me</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Care Hospital</td>
+                                            <td class="d-none d-xl-table-cell">-</td>
+                                            <td class="d-none d-xl-table-cell">03/06/2022</td>
+                                            <td><span class="badge bg-success">Done</span></td>
+                                            <td class="d-none d-md-table-cell">Son</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Care Hospital</td>
+                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
+                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
+                                            <td><span class="badge bg-warning">In progress</span></td>
+                                            <td class="d-none d-md-table-cell">Me</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Care Hospital</td>
+                                            <td class="d-none d-xl-table-cell">-</td>
+                                            <td class="d-none d-xl-table-cell">03/06/2022</td>
+                                            <td><span class="badge bg-success">Done</span></td>
+                                            <td class="d-none d-md-table-cell">Husband</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Care Hospital</td>
+                                            <td class="d-none d-xl-table-cell">-</td>
+                                            <td class="d-none d-xl-table-cell">03/06/2022</td>
+                                            <td><span class="badge bg-success">Done</span></td>
+                                            <td class="d-none d-md-table-cell">Daughter</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Care Hospital</td>
+                                            <td class="d-none d-xl-table-cell">-</td>
+                                            <td class="d-none d-xl-table-cell">03/06/2022</td>
+                                            <td><span class="badge bg-success">Done</span></td>
+                                            <td class="d-none d-md-table-cell">Daughter</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Care Hospital</td>
+                                            <td class="d-none d-xl-table-cell">01/01/2021</td>
+                                            <td class="d-none d-xl-table-cell">31/06/2021</td>
+                                            <td><span class="badge bg-warning">In progress</span></td>
+                                            <td class="d-none d-md-table-cell">Husband</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-6 text-start">
+                            <p class="mb-0">
+                                <a class="text-muted" href="#" target="_blank"><strong>Health Plus</strong></a> &copy;
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/fontawesome5.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/tableSortable.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+            var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+            gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+            gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+            // Line chart
+            new Chart(document.getElementById("chartjs-dashboard-line"), {
+                type: "line",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    datasets: [{
+                        label: "Sales ($)",
+                        fill: true,
+                        backgroundColor: gradient,
+                        borderColor: window.theme.primary,
+                        data: [
+                            2115,
+                            1562,
+                            1584,
+                            1892,
+                            1587,
+                            1923,
+                            2566,
+                            2448,
+                            2805,
+                            3438,
+                            2917,
+                            3327
+                        ]
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        intersect: false
+                    },
+                    hover: {
+                        intersect: true
+                    },
+                    plugins: {
+                        filler: {
+                            propagate: false
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            reverse: true,
+                            gridLines: {
+                                color: "rgba(0,0,0,0.0)"
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                stepSize: 1000
+                            },
+                            display: true,
+                            borderDash: [3, 3],
+                            gridLines: {
+                                color: "rgba(0,0,0,0.0)"
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Pie chart
+            new Chart(document.getElementById("chartjs-dashboard-pie"), {
+                type: "pie",
+                data: {
+                    labels: ["Chrome", "Firefox", "IE"],
+                    datasets: [{
+                        data: [4306, 3801, 1689],
+                        backgroundColor: [
+                            window.theme.primary,
+                            window.theme.warning,
+                            window.theme.danger
+                        ],
+                        borderWidth: 5
+                    }]
+                },
+                options: {
+                    responsive: !window.MSInputMethodContext,
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    cutoutPercentage: 75
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Bar chart
+            new Chart(document.getElementById("chartjs-dashboard-bar"), {
+                type: "bar",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    datasets: [{
+                        label: "This year",
+                        backgroundColor: window.theme.primary,
+                        borderColor: window.theme.primary,
+                        hoverBackgroundColor: window.theme.primary,
+                        hoverBorderColor: window.theme.primary,
+                        data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+                        barPercentage: .75,
+                        categoryPercentage: .5
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            },
+                            stacked: false,
+                            ticks: {
+                                stepSize: 20
+                            }
+                        }],
+                        xAxes: [{
+                            stacked: false,
+                            gridLines: {
+                                color: "transparent"
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+            var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+            document.getElementById("datetimepicker-dashboard").flatpickr({
+                inline: true,
+                prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+                nextArrow: "<span title=\"Next month\">&raquo;</span>",
+                defaultDate: defaultDate
+            });
+        });
+    </script>
+    <script>
+
+        $('#value, #count, #count1').each(function () {
+
+            $(this).prop('counter', 0).animate({
+
+                counter: $(this).text()
+
+            }, {
+
+                duration: 4000,
+
+                easing: 'swing',
+
+                step: function (now) {
+
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
